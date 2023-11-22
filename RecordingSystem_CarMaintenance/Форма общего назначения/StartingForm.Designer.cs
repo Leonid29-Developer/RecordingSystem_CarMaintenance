@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartingForm));
-            this.Request = new System.Windows.Forms.Label();
+            this.Label_Request = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Authorization = new System.Windows.Forms.Label();
+            this.Label_Authorization = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // Request
+            // Label_Request
             // 
-            this.Request.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Request.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Request.Location = new System.Drawing.Point(153, 49);
-            this.Request.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Request.Name = "Request";
-            this.Request.Size = new System.Drawing.Size(200, 50);
-            this.Request.TabIndex = 0;
-            this.Request.Text = "Составить заявку";
-            this.Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Request.Click += new System.EventHandler(this.Request_Click);
+            this.Label_Request.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Label_Request.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label_Request.Location = new System.Drawing.Point(153, 49);
+            this.Label_Request.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label_Request.Name = "Label_Request";
+            this.Label_Request.Size = new System.Drawing.Size(200, 50);
+            this.Label_Request.TabIndex = 0;
+            this.Label_Request.Text = "Составить заявку";
+            this.Label_Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Request.Click += new System.EventHandler(this.Request_Click);
             // 
             // pictureBox1
             // 
@@ -61,18 +61,18 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Authorization
+            // Label_Authorization
             // 
-            this.Authorization.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Authorization.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Authorization.Location = new System.Drawing.Point(153, 136);
-            this.Authorization.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Authorization.Name = "Authorization";
-            this.Authorization.Size = new System.Drawing.Size(200, 50);
-            this.Authorization.TabIndex = 2;
-            this.Authorization.Text = "Авторизоваться";
-            this.Authorization.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Authorization.Click += new System.EventHandler(this.Authorization_Click);
+            this.Label_Authorization.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Label_Authorization.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label_Authorization.Location = new System.Drawing.Point(153, 136);
+            this.Label_Authorization.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label_Authorization.Name = "Label_Authorization";
+            this.Label_Authorization.Size = new System.Drawing.Size(200, 50);
+            this.Label_Authorization.TabIndex = 2;
+            this.Label_Authorization.Text = "Авторизоваться";
+            this.Label_Authorization.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Authorization.Click += new System.EventHandler(this.Authorization_Click);
             // 
             // pictureBox2
             // 
@@ -91,9 +91,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 238);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.Authorization);
+            this.Controls.Add(this.Label_Authorization);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Request);
+            this.Controls.Add(this.Label_Request);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "StartingForm";
@@ -106,9 +106,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Request;
+        private System.Windows.Forms.Label Label_Request;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Authorization;
+        private System.Windows.Forms.Label Label_Authorization;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

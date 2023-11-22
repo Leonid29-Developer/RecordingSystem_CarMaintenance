@@ -46,24 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Request.cs">
+    <Compile Include="Форма общего назначения\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Request.Designer.cs">
+    <Compile Include="Форма общего назначения\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы «Пользователь»\ClientAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы «Пользователь»\ClientAccount.Designer.cs">
+      <DependentUpon>ClientAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerСontacts.cs" />
+    <Compile Include="Формы «Пользователь»\Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы «Пользователь»\Request.Designer.cs">
       <DependentUpon>Request.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartingForm.cs">
+    <Compile Include="Форма общего назначения\StartingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartingForm.Designer.cs">
+    <Compile Include="Форма общего назначения\StartingForm.Designer.cs">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Request.resx">
+    <EmbeddedResource Include="Форма общего назначения\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы «Пользователь»\ClientAccount.resx">
+      <DependentUpon>ClientAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы «Пользователь»\Request.resx">
       <DependentUpon>Request.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartingForm.resx">
+    <EmbeddedResource Include="Форма общего назначения\StartingForm.resx">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

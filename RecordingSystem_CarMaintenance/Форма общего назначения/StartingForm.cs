@@ -15,13 +15,9 @@ namespace RecordingSystem_CarMaintenance
         public StartingForm()=>InitializeComponent();
 
         private void Request_Click(object sender, EventArgs e)
-        {
-            Hide(); new Request().ShowDialog(); Show();
-        }
+        { Hide(); Request.Request_Authorized = false; new Request().ShowDialog(); Show(); }
 
         private void Authorization_Click(object sender, EventArgs e)
-        {
-
-        }
+        { Hide(); new Authorization().ShowDialog(); Show(); }
     }
 }
