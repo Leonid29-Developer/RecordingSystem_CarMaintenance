@@ -22,15 +22,15 @@ namespace RecordingSystem_CarMaintenance
             {
                 DataTable DATA = new DataTable();
 
-                using (SqlConnection SQL_Connection = new SqlConnection(Request.ConnectString))
+                using (SqlConnection SQL_Connection = new SqlConnection(FormRequest.ConnectString))
                 {
-                    SQL_Connection.Open(); using (SqlCommand CMD = new SqlCommand($"EXEC [Interactive_FairyTales].[dbo].[Authorization] '{TB_Login.Text}','{TB_Password.Text}'", SQL_Connection)) 
-                    using (SqlDataReader Reader = CMD.ExecuteReader()) DATA.Load(Reader);  SQL_Connection.Close();
+                    SQL_Connection.Open(); using (SqlCommand CMD = new SqlCommand($"EXEC [RecordingSystem_CarMaintenance].[dbo].[Authorization] '{TB_Login.Text}','{TB_Password.Text}'", SQL_Connection))
+                    using (SqlDataReader Reader = CMD.ExecuteReader()) { T = Reader.HasRows;DATA.Load(Reader);  }  SQL_Connection.Close();
                 }
 
-                if (T == true) switch ((string)DATA.Rows[0][2])
+                if (T == true) switch ((string)DATA.Rows[0][0])
                     {
-                        case "User": { Hide(); ClientAccount.CustomerСontact = (string)DATA.Rows[0][3]; new ClientAccount().ShowDialog(); Close(); } break;
+                        case "User": { Hide(); ClientAccount.CustomerСontact = (string)DATA.Rows[0][1]; new ClientAccount().ShowDialog(); Close(); } break;
                         case "Master": { /*Hide(); ClientAccount.CustomerСontact = (string)DATA.Rows[0][3]; new ClientAccount().ShowDialog();*/ Close(); } break;
                         case "Administrator": { /*Hide(); ClientAccount.CustomerСontact = (string)DATA.Rows[0][3]; new ClientAccount().ShowDialog();*/ Close(); } break;
                     }

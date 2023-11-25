@@ -1,6 +1,6 @@
 ﻿namespace RecordingSystem_CarMaintenance
 {
-    partial class Request
+    partial class FormRequest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Request));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRequest));
             this.label1 = new System.Windows.Forms.Label();
             this.TB_TransportModel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();

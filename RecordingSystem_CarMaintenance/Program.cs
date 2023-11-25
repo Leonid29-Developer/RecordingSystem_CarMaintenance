@@ -16,7 +16,8 @@ namespace RecordingSystem_CarMaintenance
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartingForm());
+            //Application.Run(new StartingForm());
+            Application.Run(new Authorization());
         }
     }
 }
