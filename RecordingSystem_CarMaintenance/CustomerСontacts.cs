@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RecordingSystem_CarMaintenance
 {
     public class CustomerСontacts
     {
+        public string ID { get; private set; }
         public string LastName { get; private set; }
         public string FirstName { get; private set; }
         public string MiddleName { get; private set; }
@@ -16,6 +13,8 @@ namespace RecordingSystem_CarMaintenance
 
         public CustomerСontacts(string NewLastName, string NewFirstName, string NewMiddleName, string NewEmail, string NewTelephone)
         { LastName = NewLastName; FirstName = NewFirstName; MiddleName = NewMiddleName; Email = NewEmail; Telephone = NewTelephone; }
+
+        public void IDA (string NewID) => ID= NewID;
     }
 
     public class MaintenanceRequests
@@ -26,10 +25,11 @@ namespace RecordingSystem_CarMaintenance
         public int Cost { get; private set; }
         public string StatusWork { get; private set; }
         public string StatusPayment { get; private set; }
-        public CustomerСontacts DesignatedMaster { get; private set; }
+        public CustomerСontacts Contact_Client { get; private set; }
+        public CustomerСontacts Contact_Master { get; private set; }
         public DateTime Date { get; private set; }
 
-        public MaintenanceRequests(string NewID, string NewTransportModel, string NewDescriptionProblem, int NewCost, string NewStatusWork, string NewStatusPayment, CustomerСontacts NewDesignatedMaster, DateTime NewDate)
-        { ID = NewID; TransportModel = NewTransportModel; DescriptionProblem = NewDescriptionProblem; Cost = NewCost; StatusWork = NewStatusWork; StatusPayment = NewStatusPayment; DesignatedMaster = NewDesignatedMaster; Date = NewDate; }
+        public MaintenanceRequests(string NewID, string NewTransportModel, string NewDescriptionProblem, int NewCost, string NewStatusWork, string NewStatusPayment, CustomerСontacts NewClient, CustomerСontacts NewMaster, DateTime NewDate)
+        { ID = NewID; TransportModel = NewTransportModel; DescriptionProblem = NewDescriptionProblem; Cost = NewCost; StatusWork = NewStatusWork; StatusPayment = NewStatusPayment; Contact_Client = NewClient; Contact_Master = NewMaster; Date = NewDate; }
     }
 }

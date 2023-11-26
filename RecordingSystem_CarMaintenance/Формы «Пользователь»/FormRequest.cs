@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Contracts;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RecordingSystem_CarMaintenance
 {
@@ -78,6 +70,8 @@ namespace RecordingSystem_CarMaintenance
                         SQL_Command.CommandText = Request; SQL_Command.ExecuteNonQuery(); SQL_Connection.Close();
                     }
                 }
+
+                MessageBox.Show("Успешно создана заявка на ТО", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information); Close();
             }
         }
     }

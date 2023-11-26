@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Формы «Мастер»\MasterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы «Мастер»\MasterAccount.Designer.cs">
+      <DependentUpon>MasterAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы «Администратор»\AdminAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы «Администратор»\AdminAccount.Designer.cs">
+      <DependentUpon>AdminAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Форма общего назначения\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Формы «Мастер»\MasterAccount.resx">
+      <DependentUpon>MasterAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы «Администратор»\AdminAccount.resx">
+      <DependentUpon>AdminAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Форма общего назначения\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +125,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_Delete.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Picture_Notepad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
