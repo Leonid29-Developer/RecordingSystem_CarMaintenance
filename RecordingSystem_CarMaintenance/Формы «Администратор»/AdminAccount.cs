@@ -63,7 +63,11 @@ namespace RecordingSystem_CarMaintenance
                 SQL_Connection.Open();
                 string Request_SQL = $"EXEC [RecordingSystem_CarMaintenance].[dbo].[Masters]"; // SQL-запрос
                 SqlCommand SQL_Command = new SqlCommand(Request_SQL, SQL_Connection); SqlDataReader Reader = SQL_Command.ExecuteReader();
-                while (Reader.Read()) Masters.Add(new CustomerСontacts((string)Reader.GetValue(1), (string)Reader.GetValue(2), (string)Reader.GetValue(3), (string)Reader.GetValue(4), (string)Reader.GetValue(5)));
+                while (Reader.Read())
+                {
+                    CustomerСontacts Log = new CustomerСontacts((string)Reader.GetValue(1), (string)Reader.GetValue(2), (string)Reader.GetValue(3), (string)Reader.GetValue(4), (string)Reader.GetValue(5));
+                    Log.IDA((string)Reader.GetValue(0)); Masters.Add(Log);
+                }
                 SQL_Connection.Close();
             }
 
@@ -267,8 +271,6 @@ namespace RecordingSystem_CarMaintenance
 
         private void MasterSet_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Masters[CB_Mast.SelectedIndex].ID);
-
             using (SqlConnection SQL_Connection = new SqlConnection(FormRequest.ConnectString))
             {
                 SQL_Connection.Open(); SqlCommand SQL_Command = SQL_Connection.CreateCommand();
